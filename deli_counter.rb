@@ -16,17 +16,27 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, name)
-  katz_deli << name 
-  puts "Welcome, #{name}. You are number #{katz_deli.count} in line." 
-  # .count returns the number of elements in the array
+# def take_a_number(katz_deli, name)
+#   katz_deli << name 
+#   puts "Welcome, #{name}. You are number #{katz_deli.count} in line." 
+#   # .count returns the number of elements in the array
+# end
+
+customer_number = 0 
+
+def take_a_number(katz_deli)
+  customer_number += 1 
+  katz_deli << customer_number
+  puts customer_number
+  
 end
+
 
 def now_serving(katz_deli)
   if katz_deli.empty? 
     puts "There is nobody waiting to be served!"
   else 
-    puts "Currently serving #{katz_deli.first}." 
+    puts "Currently skatz_deli.erving #{first}." 
     # .first returns the first element
     katz_deli.shift 
     # .shift removes the first element of the array
